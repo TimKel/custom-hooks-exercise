@@ -14,7 +14,6 @@ function PokeDex() {
     const response = await axios.get(
       `https://pokeapi.co/api/v2/pokemon/${name}/`
     );
-    console.log(response)
     setPokemon(pokemon => [...pokemon, { ...response.data, id: uuid() }]);
   };
   return (
